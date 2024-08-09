@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="stylesheet.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-align: center;
+      opacity: 0;
+      animation: slideRight 1s ease forwards;
+      animation-delay: 0.7s;
+    }
+    .container {
+      width: 80%;
+      margin: 2rem auto;
+      background: transparent;
+      padding: 2rem;
+      border: 2px solid cyan;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+      opacity: 0;
+      animation: slideRight 1s ease forwards;
+      animation-delay: 1s;
+    }
+    header {
+      text-align: center;
+      border-bottom: 2px solid cyan;
+      padding-bottom: 1rem;
+      margin-bottom: 2rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: white;
+    }
+    header p {
+      margin: 0.5rem 0;
+      font-size: 1.2rem;
+      color: white;
+    }
+    .biodata {
+      text-align: center;
+    }
+    .biodata h1 {
+      margin-bottom: 1rem;
+    }
+    .biodata .divider {
+      width: 600px;
+      border: 1px solid cyan;
+      margin: 0 auto;
+      margin-bottom: 1rem;
+    }
+    .biodata-content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      max-width: 600px;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+    .biodata-content .info {
+      flex: 1;
+      min-width: 200px;
+      text-align: left;
+    }
+    .biodata-content .info p {
+      margin-bottom: 1rem; /* Menambahkan jarak bawah pada setiap elemen */
+    }
+    .biodata-content img {
+      border-radius: 10px;
+      width: 170px;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <br>
+  <h1 class="sub-title">My<span> Data</span></h1>
+  <div class="container">
+    <header>
+      <h1>Justicia</h1>
+      <p>Email: 2300018369@webmail.uad.ac.id | Telepon: 085 337 045 237</p>
+    </header>
+    
+    <div class="biodata">
+      <h1>BIODATA DIRI</h1>
+      <div class="divider"></div>
+      <div class="biodata-content">
+        <div class="info">
+          <p><strong>NIM :</strong> 2300018369</p>
+          <p><strong>Nama :</strong> Justicia</p>
+          <p><strong>Tempat/Tanggal Lahir : </strong> Dompu, 26 September 2005</p>
+          <p><strong>Program Studi : </strong> Informatika</p>
+          <p><strong>Fakultas : </strong> Teknologi Industri</p>
+          <p><strong>Alamat : </strong> Kabupaten Dompu, NTB</p>
+          <p><strong>Email : </strong> 2300018369@webmail.uad.ac.id</p>
+        </div>
+        <img src="FOTO.jpg" alt="Foto Justicia">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

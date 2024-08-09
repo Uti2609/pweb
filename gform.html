@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Data Mahasiswa</title>
+    <style>
+        .gform {
+            max-width: 55rem;
+            margin: 2rem auto;
+            padding: 2rem;
+            border: 2px solid cyan;
+            border-radius: 10px; 
+            background-color: transparent;
+            color: white; 
+            opacity: 0;
+            animation: slideLeft 1s ease forwards;
+            animation-delay: 0.7s;
+        }
+        .sub-title {
+            opacity: 0;
+            animation: slideRight 1s ease forwards;
+            animation-delay: 1s;
+        }
+        .gform form {
+            max-width: 100%;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .gform form .input-box {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .gform form .input-field {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: .8rem 0;
+        }
+        .gform form .input-field label {
+            flex: 1;
+            font-size: 1.4rem;
+            margin-right: 1rem;
+            white-space: nowrap;
+        }
+        .gform form .input-box .input-field input,
+        .gform form .input-box .input-field select,
+        .gform form .input-box .input-field textarea {
+            flex: 2;
+            padding: 1rem;
+            font-size: 1.6rem;
+            color: white;
+            background: transparent;
+            border-radius: .6rem;
+            border: .2rem solid cyan;
+        }
+        .gform form .input-box .input-field input::placeholder,
+        .gform form .input-box .input-field textarea::placeholder {
+            color: white;
+        }
+        .gform form .input-box .input-field select {
+            color: white;
+            background-color:  #121212; 
+        }
+        .btn-box-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 3rem;
+        }
+        .btn-box {
+            margin: 0 1rem;
+            padding: 1rem 2rem;
+            font-size: 1.6rem;
+            color: white;
+            background-color: cyan;
+            border: none;
+            border-radius: .6rem;
+            cursor: pointer;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br>
+    <h1 class="sub-title">My<span>Task</span></h1>
+    <section class="gform" id="gform">
+        <h1 class="sub-title">Form<span> Mahasiswa</span></h1>
+        <form action="main.php" method="post" onsubmit="return validateForm()">
+            <div class="input-box">
+                <div class="input-field">
+                    <label for="name">Nama</label>
+                    <input type="text" id="name" name="name" placeholder="Masukkan Nama" required>
+                    <span class="error" id="nameError"></span>
+                </div>
+                <div class="input-field">
+                    <label for="nim">NIM</label>
+                    <input type="text" id="nim" name="nim" placeholder="Masukkan NIM" required>
+                    <span class="error" id="nimError"></span>
+                </div>
+                <div class="input-field">
+                    <label for="dob">Tanggal Lahir</label>
+                    <input type="date" id="dob" name="dob" placeholder="Masukkan Tanggal Lahir" required>
+                </div>
+                <div class="input-field">
+                    <label for="age">Umur</label>
+                    <input type="number" id="age" name="age" placeholder="Masukkan Umur" required>
+                </div>
+                <div class="input-field">
+                    <label for="gender">Jenis Kelamin</label>
+                    <select id="gender" name="gender" required>
+                        <option value="" disabled selected>Pilih Jenis Kelamin</option>
+                        <option value="female">Perempuan</option>
+                        <option value="male">Laki-laki</option>
+                    </select>
+                </div>
+                <div class="input-field">
+                    <label for="address-origin">Alamat Asal</label>
+                    <textarea id="address-origin" name="address-origin" placeholder="Masukkan Alamat Asal" required></textarea>
+                </div>
+                <div class="input-field">
+                    <label for="address-current">Alamat Sekarang</label>
+                    <textarea id="address-current" name="address-current" placeholder="Masukkan Alamat Sekarang" required></textarea>
+                </div>
+                <div class="input-field">
+                    <label for="hobby">Hobi</label>
+                    <input type="text" id="hobby" name="hobby" placeholder="Masukkan Hobi" required>
+                </div>
+                <div class="input-field">
+                    <label for="phone">Nomor</label>
+                    <input type="text" id="phone" name="phone" placeholder="Masukkan Nomor" required>
+                    <span class="error" id="phoneError"></span>
+                </div>
+                <div class="input-field">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Masukkan Email" required>
+                </div>
+            </div>
+            <div class="btn-box-container">
+                <button type="submit" class="btn-box">Submit</button>
+                <button type="reset" class="btn-box">Cancel</button>
+            </div>
+        </form>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>

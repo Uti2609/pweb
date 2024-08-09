@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIODATA</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        .education {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 5rem;
+            max-width: 80%;
+            margin: 0 auto;
+            opacity: 0;
+            animation: slideRight 1s ease forwards;
+            animation-delay: 0.7s;
+        }
+        .education .education-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5rem;
+            justify-content: center;
+            opacity: 0;
+            animation: slideRight 1s ease forwards;
+            animation-delay: 1s;
+        }
+        .education-row .education-column {
+            flex: 1 1 40rem;
+            max-width: 40%;
+        }
+        .education-column .title {
+            font-size: 2rem;
+            margin: 0 0 1.5rem 2rem;
+        }
+        .education-column .education-box {
+            border-left: .2rem solid cyan;
+        }
+        .education-box .education-content {
+            position: relative;
+            padding-left: 2rem;
+        }
+        .education-box .education-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -1rem;
+            width: 2rem;
+            height: 2rem;
+            background: #0ef;
+            border-radius: 50%;
+        }
+        .education-content .content {
+            position: relative;
+            padding: 1.5rem;
+            border: .2rem solid cyan;
+            border-radius: .6rem;
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        .education-content .content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 100%;
+            background: #081b29;
+            z-index: -1;
+            transition: .5s;
+        }
+        .education-content .content:hover::before {
+            width: 100%;
+        }
+        .education-content .content .year {
+            font-size: 1.5rem;
+            color: #0ef;
+            padding-bottom: .5rem;
+        }
+        .education-content .content .year i {
+            padding-right: .5rem;
+        }
+        .education-content .content h3 {
+            font-size: 1.5rem;
+        }
+        .education-content .content p {
+            font-size: 1rem;
+            padding-top: .5rem;
+        }
+        h1.sub-title {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 2.5rem;
+        }
+        h1.sub-title span {
+            color: #00eeff;
+        }
+    </style>
+</head>
+<body>
+    <section class="education" id="education">
+        <h1 class="sub-title">About<span> Me</span></h1>
+        <div class="education-row">
+            <div class="education-column">
+                <h3 class="title">About Me</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i> Ringkasan</div>
+                            <h3>About Me</h3>
+                            <p>Saya adalah seorang pelajar dan saya termotivasi untuk terus belajar dan berkembang. Dalam setiap tugas, saya selalu berusaha memberikan yang terbaik. 
+                                Saya selalu berusaha untuk memperbarui pengetahuan saya. Saya aktif terlibat dalam berbagai kegiatan ekstrakurikuler yang berhubungan dengan teknologi. 
+                                Saya percaya bahwa kerja keras dan dedikasi adalah kunci sukses.</p>
+                            <br><br>
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i>Hobby</div>
+                            <h3>My Hobby</h3>
+                            <p>Saya suka membaca buku, terutama fiksi dan non-fiksi yang memberikan wawasan baru serta meningkatkan pemahaman saya tentang berbagai topik. Saya juga tertarik dengan menulis, baik itu jurnal pribadi maupun karya kreatif, yang membantu saya mengekspresikan pikiran dan perasaan saya.</p>
+                            <br><br>
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i>Email</div>
+                            <h3>My Email</h3>
+                            <p>2300018369@webmail.uad.ac.id</p>
+                            <br><br>
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i>Number</div>
+                            <h3>My Number</h3>
+                            <p>085337045237</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="education-column">
+                <h3 class="title">Education</h3>
+                <div class="education-box">
+                    <div class="education-content">
+                        <div class="content">
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i>Taman Kanak-Kanak</div>
+                            <h3>TK Negeri</h3>
+                            <p>TK Pembina Negeri Dompu, Kelurahan Kandai Dua, Kabupaten Dompu.</p>
+                            <br><br>
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i>Sekolah Dasar</div>
+                            <h3>Madrasah Ibtidaiyah</h3>
+                            <p>Madrasah Ibtidaiyah Negeri 1 Dompu, Kelurahan Kandai Dua, Kabupaten Dompu.</p>
+                            <br><br>
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i>Sekolah Menengah Pertama</div>
+                            <h3>Madrasah Tsanawiyah</h3>
+                            <p>Madrasah Tsanawiyah Negeri 1 Dompu, Kelurahan Kandai Dua, Kabupaten Dompu.</p>
+                            <br><br>
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i>Sekolah Menengah Atas</div>
+                            <h3>SMA Negeri</h3>
+                            <p>SMA Negeri 1 Woja, Kelurahan Kandai Dua, Kabupaten Dompu.</p>
+                            <br><br>
+                            <div class="year"><i class='bx bxs-user-circle' style="color:#00eeff"></i>Universitas</div>
+                            <h3>Universitas Ahmad Dahlan</h3>
+                            <p>Tamanan, Kabupaten Bantul, Daerah Istimewa Yogyakarta</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
